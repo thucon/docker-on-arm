@@ -1,0 +1,15 @@
+FROM python:3.11.0-alpine3.15
+
+ARG HOME=/home/user
+
+RUN apk --no-cache add bash py3-pip gfortran musl-dev
+
+RUN pip install flask
+
+# Create home endpoint
+RUN mkdir -p ${HOME}/service
+WORKDIR ${HOME}/service
+COPY service.py ${HOME}/service
+
+# Default command to execute
+ENTRYPOINT ["python","-m","flask","--app=service.py", "run", "--host=0.0.0.0", "--port=5000"]

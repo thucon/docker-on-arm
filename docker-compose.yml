@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  web:
+    image: thucon/docker-service-on-arm
+    ports:
+      - "8080:5000"
+    volumes:
+      - .:/home/user/service
+    environment:
+      FLASK_DEBUG: "True"
+    restart: always
+
+# up (create and start):
+#   docker compose up --detach
+#
+# down (stop and remove):
+#   docker compose down
+#
+# stop:
+#   docker compose stop
+#
+# remove:
+#   docker compose rm
+#
+# logs:
+#   docker compose logs
