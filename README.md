@@ -6,7 +6,7 @@ This project shows how to cross compile docker applications and services to
 The main goal is to be able to run the docker containers on a Raspberry Pi 3
 with a custom Yocto embedded Linux.
 
-To see how the Yocto image was made please refer to this project: "TODO:"
+To see how the Yocto image was made please refer to this project: https://github.com/thucon/rpi-yocto-docker
 
 ## Prerequisites
 
@@ -146,7 +146,7 @@ is straight forward - just follow the guide.
 
 To test the ARM version of the produced docker image we can log into a 
 Raspberry Pi running a OS with docker support (fx the Yocto image created 
-here: XXX).(TODO: Link!!).
+here: https://github.com/thucon/rpi-yocto-docker)
 
 Below we have logged into the Raspberry Pi via SSH, and have executed the
 `docker run --rm thucon/docker-app-on-arm` command directly in the shell
